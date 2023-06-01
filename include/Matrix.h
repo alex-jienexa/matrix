@@ -1,3 +1,6 @@
+#ifndef MATRIX_H
+#define MATRIX_H
+
 #include <vector>
 #include <string>
 
@@ -49,3 +52,5 @@ public:
         - Все особые операции можно перенести в другой файл, отличный от заголовочного
    */
 };
+
+#endif
