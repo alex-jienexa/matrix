@@ -32,28 +32,20 @@ public:
     Matrix operator/(const double&) const;
     Matrix operator*(const double&) const;
 
-    // TODO: Операторы сравнения / Comprasion operations
-
     // Создание особых матриц / Creation of special matrix
+        // Будут объявлены в ./constructors отдельным файлом
     Matrix identity() const; // Единичная матрица = элементы на главной диагонали единицы
     Matrix transposed(const Matrix&) const; // Транспонированная матрица = смена строк и столбцов местами
+    Matrix square(const int&); // Квадратная матрица n*n
 
     // Особые операции с матрицами / Special operations with matrix
-    /* TODO:
-        - Обратная матрица = 1/a
-        - След матрицы = M
-        - Детерминант матрицы = det(A) = |A|
-        - ...
-    */
-};
+    Matrix inverse(const Matrix&) const; // Обратная матрица A^-1
+    double det(const Matrix&) const; // Определитель матрицы
+    double trace(const Matrix&) const; // След матрицы = суммирование элементов главной диагонали матрицы
+    double minor(const Matrix&) const; // Минор матрицы
 
-/* 
-Примерный план распределения работы:
-Matrix
-|-headers
-    |-private           // Приватные переменные
-    |-initialization    // Конструкторы и деструкторы
-    |-equality          // Перегрзуки операторов сравнения 
-    |-mathematics       // Действия арифметики матриц
-    |(may be)-practical // (Возможно) практическое применение матриц (решение уравнений?)
-*/
+    /* 
+    ПРИМЕЧАНИЯ: 
+        - Все особые операции можно перенести в другой файл, отличный от заголовочного
+   */
+};
