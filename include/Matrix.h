@@ -15,9 +15,9 @@ public:
     // Конструкторы / Constructors
     Matrix();
     Matrix(const Matrix& other);
-    Matrix(const std::vector<std::vector<double>>); 
-    Matrix(const std::vector<std::vector<int>>);
-    Matrix(const std::vector<std::vector<std::string>>); // Предполагается использование std::stod(...)
+    Matrix(const std::vector<std::vector<double>>&); 
+    Matrix(const std::vector<std::vector<int>>&);
+    Matrix(const std::vector<std::vector<std::string>>&); // Предполагается использование std::stod(...)
 
     // Операции сравнения / Compration operations
     Matrix operator==(const Matrix& other);
@@ -45,7 +45,7 @@ public:
     Matrix inverse() const; // Обратная матрица A^-1
     double det() const; // Определитель матрицы
     double trace() const; // След матрицы = суммирование элементов главной диагонали матрицы
-    double minor(int i, int j) const; // Минор матрицы
+    double minor(int& i, int& j) const; // Минор матрицы
 
     /* 
     ПРИМЕЧАНИЯ: 
