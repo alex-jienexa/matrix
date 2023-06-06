@@ -1,5 +1,6 @@
-# Это тестовый файл, его нет необходимости коммитить
-./main.cpp
+# Файлы сборки и настройки от CMake и VSCode
+build/
+.vscode/
 
 # Prerequisites
 *.d
@@ -33,5 +34,3 @@
 *.exe
 *.out
 *.app
-
-.vscode/settings.json

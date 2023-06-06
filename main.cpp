@@ -1,9 +1,10 @@
 #include "Matrix.h"
+#include "MatrixConfigure.h"
 
 #include <iostream>
 #include <vector>
 
-int main() {
+int main(int argc, char **argv) {
     Matrix m1;
 
     std::vector<std::vector<double>> vctr_1 = {
@@ -22,5 +23,9 @@ int main() {
     Matrix m3(vctr_2);
     Matrix m4(m3);
 
+    std::cout << m1 << std::endl << m2 << std::endl << m3 << std::endl << m4 << std::endl;
+
+    int a;
+    std::cin >> a;
     return 0;
 }
