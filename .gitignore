@@ -1,3 +1,7 @@
+# Файлы сборки и настройки от CMake и VSCode
+build/
+.vscode/
+
 # Prerequisites
 *.d
 
