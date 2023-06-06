@@ -47,6 +47,12 @@ public:
     double trace() const; // След матрицы = суммирование элементов главной диагонали матрицы
     double minor(int& i, int& j) const; // Минор матрицы
 
+
+    // Вывод матрицы / Matrix output
+    // friend std::istream& operator>>(std::istream&, BigInt&);
+    
+    friend std::ostream& operator<<(std::ostream&, const Matrix&);
+
     /* 
     ПРИМЕЧАНИЯ: 
         - Все особые операции можно перенести в другой файл, отличный от заголовочного
